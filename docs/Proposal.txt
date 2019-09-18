@@ -1,0 +1,9 @@
+Idea #1:
+
+A website that once a list of ingredients in input, it will output
+recipes that contain those ingredients. Also it will provide a Spotify
+playlist with music that suits the country of origin for your dish.
+
+Idea #2:
+
+A website that 
