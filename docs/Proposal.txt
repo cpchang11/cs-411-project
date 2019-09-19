@@ -1,10 +1,14 @@
 Idea #1:
 
-A website that once a list of ingredients in input, it will output
-recipes that contain those ingredients. Also it will provide a Spotify
-playlist with music that suits the country of origin for your dish.
+A website that once a list of ingredients are inputed, it will output
+recipes from Food API that contain those ingredients. Also, it will provide a Spotify
+playlist using Spotify's API with music that suits the country of origin for your dish. 
+Users would sign in using Facebook and would be able to save all recipes 
+that they like in a database, as well as save what ingredients they didn't 
+use so that they don't have to reenter them for next time.
 
 Idea #2:
 
-A website that would give you the shortest wait times from a list of 
-restaurants and then would order you an Uber to that restaurant.
+A website that would uses Yelp's API to give you the shortest wait times from 
+restaurants in the area and then would order you an Uber using their API to go to the restaurant you choose.
+Users would sign in using Facebook and save all restaraunts that they liked in a database.
