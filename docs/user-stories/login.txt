@@ -1,0 +1,7 @@
+User Story Login
+
+The user will hit the login button in the corner which will make a pop-up appear to login through facebook.
+The user will enter their username and password and if they successfully type it in, the pop-up disappers 
+and they will be logged in. If not, an error message will appear in the pop up that says the username or 
+password doesn't match. The user will be able to select a forgot password button to reset their password through an 
+email they recieve from facebook and a register button if they are a new user.
