@@ -1,0 +1,5 @@
+A user could manually remove ingredients from the app. They would be able to access
+all their ingredients, and either by search or by category they could see their ingredients.
+They would click a "remove" toggle, which would enable the user to remove ingredients
+when they click them. Then, once they found the ingredient they want to remove,
+they could simply click them and they would be removed from their list of ingredients.
