@@ -1,0 +1,9 @@
+Another way our users would be able to add ingredients on the app would be via
+categories. There would be a list of drop down boxes, each by different categories
+such as poultry, pork, fruit, spices, baking, etc. Also there would be categories
+for different dietary restrictions such as Vegan, Vegetarian, Pescatarian etc.
+
+Once a drop down would be clicked, each would have common items that fall under that
+category. So for fruit, there would be options like apple, pear, grapes etc. To
+find items under categories easier, there would also be a search box to refine your
+search.  

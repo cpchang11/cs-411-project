@@ -1,0 +1,6 @@
+One way a user would be able to add ingredients on the web app is via a search.
+There would be a standard search box, where the user would click it and type
+in their desired ingredient. By relevance, the app would suggest ingredients based
+off what the user is typing, so if they were typing in "chick", the search would
+recommend possible ingredients like "chicken breast, chicken thigh, chicken
+wings etc."
