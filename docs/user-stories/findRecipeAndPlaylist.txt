@@ -1,0 +1,3 @@
+As a user, I want to input my ingredients to get a recipe and a Spotify playlist. After succesfully logging in, 
+I will type in my ingredients one by one in a search box, and select them from the pull-down menu. 
+After selecting all of my ingredients, a recipe and a Spotify playlist will appear. 
