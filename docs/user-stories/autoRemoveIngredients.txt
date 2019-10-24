@@ -1,0 +1,5 @@
+Once a user had finished a recipe, they would have the option of automatically
+removing the ingredients they used from the app. They would do this by clicking
+that they completed the recipe. Then a button would appear that asks if they want
+to automatically remove the ingredients they used. Once clicked they are removed from
+the app.
