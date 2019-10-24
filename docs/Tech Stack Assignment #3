@@ -1,0 +1,2 @@
+We chose Node.js with MongoDB because there is good documentation and we all had a baseline knowledge of javascript.
+We considered using flask but Node.js with MongoDB is more common and is easier to find tutorials online.
