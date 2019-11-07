@@ -1,0 +1,4 @@
+We plan on using Node.js to develop our solution in. Our team is rather familiar with JavaScript and as a result it would be easier for us to move forward with that. 
+At the same time, it is easy to find documentation online in case we ever get stuck. A lack of experience also plays a large role in our decision not to use another framework,
+Flask. That lack of experience with Flask combined with the fact that we have experience in JavaScript (as well as lots of online documentation) is our main reason for moving forward
+with Node.js and not with Flask. 
