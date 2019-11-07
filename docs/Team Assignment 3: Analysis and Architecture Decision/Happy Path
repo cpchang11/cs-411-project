@@ -1,0 +1,11 @@
+Happy Path:
+
+1. The user will hit the login button in the corner which will make a pop-up appear to login through facebook.
+2. The user will enter their username and password 
+3. The pop-up disappers and they will be logged in.
+
+Sad Path:
+1a. The user selects the register button if they are a new user
+1b. An error message appears in the pop up that says the username or password doesn't match. 
+2. The user selects a forgot password button to reset their password through an 
+email they recieve from facebook
