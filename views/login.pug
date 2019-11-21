@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    head
+        nav
+            ul
+                li
+                    a(href='/auth/logout') Logout
+                li
+                    a(href='/auth/login') Login
+                li
+                    a(href='/') Homepage
+    main
+        a.facebook-btn(href='/auth/facebook') Facebook
