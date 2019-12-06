@@ -1,8 +1,12 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: lightgreen;
+  margin-left: 40%;
+  margin-top: 10%;
+
 }
 
-a {
-  color: #00B7FF;
+form {
+  margin-left: 2%;
 }

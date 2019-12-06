@@ -13,26 +13,13 @@ block content
   form(action='/saveing', method='POST')
     | Input ingredient:
     br
-    input(type='text', name='pantry', id='pantry', placeholder='enter an ingredient2')
+    input(type='text', name='pantry', id='pantry', placeholder='Enter an ingredient')
     br
-    input(type='submit', value='Submit2')
+    input(type='submit', value='Submit')
 
   form(action='/recipes', method='GET')
     br
     input(type='submit', value='Get Recipes!')
 
-  form(action='/api', method='POST')
-    | Input ingredient:
-    br
-    input(type='text', name='ingredient', id='ing', value='enter an ingredient')
-    br
-    input(type='submit', value='Submit')
-  script.
-    getData();
-    async function getData() {
-      const response = await fetch(`/api`);
-      const data = await response.json();
-      console.log(data)
-    }
 
 
