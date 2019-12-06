@@ -6,16 +6,14 @@ var rp = require('request-promise');
 const fetch = require('node-fetch');
 const mongoose = require('mongoose');
 const UserPantry = require("../models/pantry")
-
-//var bodyParser = require('body-parser');
-//app.use(bodyParser.json());
-//app.use(bodyParser.urlencoded({ extended: true }));
+require('dotenv').config()
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+// Post that returns recipe from api, used in prototype
 router.post('/api', async (request, response) => {
   if(typeof request.body.ingredient === 'undefined'){
     // The parameter is missing, example response...
@@ -24,13 +22,14 @@ router.post('/api', async (request, response) => {
   }
   const ing = request.body.ingredient;
   console.log(ing);
-  const api_url = `https://api.spoonacular.com/recipes/search?apiKey=2bbdc39afe8e4dadaf483cc3a8d299a0&query=${ing}`;
+  const api_url = `https://api.spoonacular.com/recipes/search?apiKey=${process.env.API_KEY}&query=${ing}`;
   const fetch_response = await fetch(api_url);
   const json = await fetch_response.json();
   const first_recipe = json.results[1];
   response.json(first_recipe);
 });
 
+// Post that takes input ingredients and saves to the database
 router.post('/saveing', async (request, response) => {
   if(typeof request.body.pantry === 'undefined'){
     // The parameter is missing, example response...
@@ -50,15 +49,17 @@ router.post('/saveing', async (request, response) => {
   });
 });
 
+// Get that takes ingredients in database and searches for recipes
 router.get('/recipes', async (request, response) => {
         //UserPantry.findOne({ingredients: ''}).then(function(result)
-        const api_url = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=53f17f65971c40d3af01d4908d1f823e&${idk}&number=10`;
+        const api_url = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=${process.env.API_KEY}&${idk}&number=10`;
         const fetch_response = await fetch(api_url);
         const json = await fetch_response.json();
         const first_recipe = json;
         response.json(first_recipe);
 });
 
+// Get that uses the spotify api to get playlist related to recipe
 router.get('/spotify', async (request, response) => {
     const api_url = `https://api.spotify.com/v1/playlists/37i9dQZF1DX9tPFwDMOaN1`;
     const fetch_response = await fetch(api_url);
