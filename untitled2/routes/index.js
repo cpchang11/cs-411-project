@@ -50,53 +50,20 @@ router.post('/saveing', async (request, response) => {
   });
 });
 
-router.get('/api', async (request, response) => {
-  /*const ing = request.params.ingredient;
-  console.log(ing); */
-  const api_url = `https://api.spoonacular.com/recipes/search?apiKey=2bbdc39afe8e4dadaf483cc3a8d299a0&query=chicken`;
-  /*const api_url = `https://api.spoonacular.com/recipes/search?apiKey=2bbdc39afe8e4dadaf483cc3a8d299a0&query=${ingredient}`; */
-  const fetch_response = await fetch(api_url);
-  const json = await fetch_response.json();
-  response.json(json);
-});
-
 router.get('/recipes', async (request, response) => {
-  UserPantry.findOne({ingredients: ''}).then(function(result) {
-      var listOfIngredients = result.ingredients;
-      result.save().then(result => {
-          console.log('ingredient saved to database')
-          response.redirect('/')
-      }).catch(err => {
-          response.status(400).send('unable to save to database');
-      });
-      var options = { method: 'GET',
-        url: 'https://api.spoonacular.com/recipes/findByIngredients',
-        qs:
-          { apiKey: '53f17f65971c40d3af01d4908d1f823e',
-            ingredients: listOfIngredients,
-            number: '10' },
-        headers:
-          { 'cache-control': 'no-cache',
-            Connection: 'keep-alive',
-            'Accept-Encoding': 'gzip, deflate',
-            Host: 'api.spoonacular.com',
-            'Postman-Token': 'b7ceb67c-f19c-4fa2-b5c7-8cccbb871ba8,51bd9b2d-18c0-497d-a214-8206326a40b4',
-            'Cache-Control': 'no-cache',
-            Accept: '/',
-            'User-Agent': 'PostmanRuntime/7.18.0' },
-        json: true  };
-    const request = require("request");
-    request(options, function (error, response, body) {
-      if (error) throw new Error(error);
-        //response.json(body);
-        console.log(body);
-    });
-   // const api_url = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=226d380f84e98440d8848bfb57144a69d&ingredients=${listOfIngredients}&number=10`;
-   // const fetch_response = await fetch(api_url);
-   // const json = await fetch_response.json();
-   // const recipeResults = json.results[1];
-   // response.json(recipeResults);
-  });
+        //UserPantry.findOne({ingredients: ''}).then(function(result)
+        const api_url = `https://api.spoonacular.com/recipes/findByIngredients?apiKey=53f17f65971c40d3af01d4908d1f823e&${idk}&number=10`;
+        const fetch_response = await fetch(api_url);
+        const json = await fetch_response.json();
+        const first_recipe = json;
+        response.json(first_recipe);
 });
 
+router.get('/spotify', async (request, response) => {
+    const api_url = `https://api.spotify.com/v1/playlists/37i9dQZF1DX9tPFwDMOaN1`;
+    const fetch_response = await fetch(api_url);
+    const json = await fetch_response.json();
+    const playlist = json;
+    response.json(playlist);
+});
 module.exports = router;
