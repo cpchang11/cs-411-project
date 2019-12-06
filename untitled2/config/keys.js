@@ -1,6 +1,6 @@
 module.exports = {
     facebook: {
-        clientID: '433987147516415',
-        clientSecret: '9799513aec749025f1c1c3dec27761a9'
+        clientID: 'YOUR_CLIENT_ID',
+        clientSecret: 'YOUR_CLIENT_SECRET'
     }
 }
